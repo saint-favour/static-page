@@ -50,7 +50,7 @@ export default function Features() {
           <div>
             <h5>Video </h5>
             <p className="text-[0.8rem] text-[#808080b4]">
-              Generate videos with Hailuo, Pika, <br />
+              Generate videos with Hailuo, Pika, 
               Runway, Luma, and more.
             </p>
           </div>
