@@ -1,103 +1,129 @@
+"use client";
+import Features from "@/component/features";
+import Main from "@/component/main";
+
+
+// fonts
+import {Questrial} from "next/font/google"
+
+
+// image
 import Image from "next/image";
+import brand from "../public/brand.jpeg";
+
+// hooks
+
+
+// icons
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { MdHomeFilled } from "react-icons/md";
+import { BsCardImage } from "react-icons/bs";
+import { TbVideoFilled } from "react-icons/tb";
+import { ImMagicWand } from "react-icons/im";
+import { FaPaintBrush } from "react-icons/fa";
+import { LiaDraftingCompassSolid } from "react-icons/lia";
+import { FaFolder } from "react-icons/fa";
+import { LiaImage } from "react-icons/lia";
+import { BiSupport } from "react-icons/bi";
+import { IoIosNotifications } from "react-icons/io";
+import { PiSunDimFill } from "react-icons/pi";
+import { FiMoon } from "react-icons/fi";
+
+// hooks
+import { useState } from "react";
+
+const iconMode = [<PiSunDimFill />, <FiMoon />];
+const questrialFont = Questrial({
+    subsets: ["latin"],
+    weight: "400" 
+});
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [mode, setMode] = useState(iconMode[0]);
+  const [bgColor, setbgColor] = useState("light-mode");
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  const changeModeIcon = () => {
+    const currentIndex = iconMode.indexOf(mode);
+    const nextIndex = (currentIndex + 1) % iconMode.length;
+    setMode(iconMode[nextIndex]);
+    setbgColor(bgColor === "light-mode" ? "dark-mode" : "light-mode");
+  };
+
+  return (
+    <body className={`${bgColor} ${questrialFont}`}>
+      <header className="pt-[1rem]">
+        <nav className="flex justify-between items-center flex-1 mx-[2rem]">
+          {/* logo relative link  */}
+          <div className="flex items-center gap-[1rem]">
+            <Image src={brand} alt="logo" className="w-[1rem] h-[1.2rem]" />
+            <div className="flex justify-evenly items-center">
+              <div className="bg-gradient-to-tr from-pink-300 via-purple-500 to-blue-300 to-90% w-[1rem] h-[1rem] rounded-full "></div>
+              <p className="px-[0.5rem]">bentovoientnimbilo</p>
+              <MdOutlineKeyboardArrowDown />
+            </div>
+          </div>
+
+          <ul className="flex items-center gap-[1rem] bg-[#c2c1c134] border-none rounded-[10px] h-[2.5rem] px-[5px]">
+            <li className="hover:bg-white hover:rounded-[5px] hover:border-none p-[0.5rem]">
+              <a href="#">
+                <MdHomeFilled />
+              </a>
+            </li>
+            <li className="hover:bg-white hover:rounded-[5px] hover:border-none p-[0.5rem]">
+              <a href="#">
+                <BsCardImage />
+              </a>
+            </li>
+            <li className="hover:bg-white hover:rounded-[5px] hover:border-none p-[0.5rem]">
+              <a href="">
+                <TbVideoFilled />
+              </a>
+            </li>
+            <li className="hover:bg-white hover:rounded-[5px] hover:border-none p-[0.5rem]">
+              <a href="">
+                <ImMagicWand />
+              </a>
+            </li>
+            <li className="hover:bg-white hover:rounded-[5px] hover:border-none p-[0.5rem]">
+              <a href="">
+                <FaPaintBrush />
+              </a>
+            </li>
+            <li className="hover:bg-white hover:rounded-[5px] hover:border-none p-[0.5rem]">
+              <a href="">
+                <LiaDraftingCompassSolid />
+              </a>
+            </li>
+            <li className="hover:bg-white hover:rounded-[5px] hover:border-none p-[0.5rem]">
+              <a href="">
+                <FaFolder />
+              </a>
+            </li>
+          </ul>
+          <div className="flex  items-center gap-[1rem]">
+            <section className="flex items-center gap-[0.5rem] rounded-[9px] bg-[#c2c1c134] p-[0.5rem] cursor-pointer">
+              <LiaImage />
+              <p className="text-[0.8rem]">Gallery</p>
+            </section>
+            <section className="flex items-center gap-[0.5rem] rounded-[9px] bg-[#c2c1c134] p-[0.5rem] cursor-pointer">
+              <BiSupport />
+              <p className="text-[0.8rem]">Support</p>
+            </section>
+            <section className="rounded-[9px] bg-[#c2c1c134] p-[0.5rem] cursor-pointer">
+              <IoIosNotifications />
+            </section>
+            <button
+              onClick={changeModeIcon}
+              className="rounded-[9px] bg-[#c2c1c134] p-[0.5rem] cursor-pointer"
+            >
+              {mode}
+            </button>
+            <div className="bg-gradient-to-tr from-pink-300 via-purple-500 to-blue-300 to-90% w-[1rem] h-[1rem] rounded-full cursor-pointer"></div>
+          </div>
+        </nav>
+      </header>
+      <Main />
+      <Features />
+    </body>
   );
 }

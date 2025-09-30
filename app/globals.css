@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+.background-container{
+    background-image: url('/mix.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.background-image-2{
+    
+    background-image: url('/bottle.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+/* dark & light */
+.dark-mode{
+    background-color: black;
+    color: white;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.light-mode{
+    background-color: white;
+    color: black
 }
+
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
+
+}
+
+
+/* linear colors */
+.item-1{
+    background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(128, 128, 128, 0.562), rgba(128, 128, 128, 0.295));
+}
+
+.item-3{
+    background: linear-gradient(rgb(5, 179, 248), rgba(151, 216, 241, 0.438) );
+}
+
+.item-4{
+    background: linear-gradient(rgb(0, 0, 0),rgb(128, 128, 128),rgb(165, 164, 164));
+}
+
+.item-5{
+    background: linear-gradient(rgb(0, 0, 0),rgb(128, 0, 128),rgba(165, 11, 165, 0.26));
+}
+
+.item-6{
+    background: linear-gradient(rgb(0, 100, 0), rgb(7, 179, 247),rgb(250, 250, 99));
+}
+
