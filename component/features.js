@@ -54,7 +54,7 @@ export default function Features() {
               Runway, Luma, and more.
             </p>
           </div>
-          <button className="bg-[#80808031] px-[1rem] text-[0.8rem] border-none rounded-[15px] cursor-pointer">
+          <button className="bg-[#80808031]  p-[0.4rem] px-[1.5rem] text-[0.8rem] border-none rounded-[15px] cursor-pointer">
             Open
           </button>
         </div>
