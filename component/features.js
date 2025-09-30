@@ -8,6 +8,7 @@ import { IoIosBody } from "react-icons/io";
 import { RiDoorLockBoxFill } from "react-icons/ri";
 import { BsFillCreditCardFill } from "react-icons/bs";
 import { LiaDraftingCompassSolid } from "react-icons/lia";
+import { PiUserCircleDashed } from "react-icons/pi";
 
 export default function Features() {
   return (
@@ -49,8 +50,8 @@ export default function Features() {
           <div>
             <h5>Video </h5>
             <p className="text-[0.8rem] text-[#808080b4]">
-              Generate images with custom <br />
-              styles in flux and ideogram.
+              Generate videos with Hailuo, Pika, <br />
+              Runway, Luma, and more.
             </p>
           </div>
           <button className="bg-[#80808031] px-[1rem] text-[0.8rem] border-none rounded-[15px] cursor-pointer">
@@ -65,8 +66,9 @@ export default function Features() {
           <div>
             <h5>Realtime </h5>
             <p className="text-[0.8rem] text-[#808080b4]">
-              Generate images with custom <br />
-              styles in flux and ideogram.
+              Realtime AI rendering on a canvas
+              <br />
+              Instant feedback loops.
             </p>
           </div>
           <button className="bg-[#80808031] p-[0.4rem] px-[1.5rem] text-[0.8rem] border-none rounded-[15px] cursor-pointer">
@@ -86,8 +88,8 @@ export default function Features() {
               </span>
             </h5>
             <p className="text-[0.8rem] text-[#808080b4]">
-              Generate images with custom <br />
-              styles in flux and ideogram.
+              Upscale and enhance images and <br />
+              videos up to 22K.
             </p>
           </div>
           <button className="bg-[#80808031] p-[0.4rem] px-[1.5rem] text-[0.8rem] border-none rounded-[15px] cursor-pointer">
@@ -107,8 +109,8 @@ export default function Features() {
               </span>
             </h5>
             <p className="text-[0.8rem] text-[#808080b4]">
-              Generate images with custom <br />
-              styles in flux and ideogram.
+              Add objects, change style, or <br />
+              expand photos and generations.
             </p>
           </div>
           <button className="bg-[#80808031] p-[0.4rem] px-[1.5rem] text-[0.8rem] border-none rounded-[15px] cursor-pointer">
@@ -128,8 +130,7 @@ export default function Features() {
               </span>
             </h5>
             <p className="text-[0.8rem] text-[#808080b4]">
-              Generate images with custom <br />
-              styles in flux and ideogram.
+              Lip sync any video to any audio.
             </p>
           </div>
           <button className="bg-[#80808031] p-[0.4rem] px-[1.5rem] text-[0.8rem] border-none rounded-[15px] cursor-pointer">
@@ -149,8 +150,8 @@ export default function Features() {
               </span>
             </h5>
             <p className="text-[0.8rem] text-[#808080b4]">
-              Generate images with custom <br />
-              styles in flux and ideogram.
+              Transfer motion to images and <br />
+              animate characters.
             </p>
           </div>
           <button className="bg-[#80808031] p-[0.4rem] px-[1.5rem] text-[0.8rem] border-none rounded-[15px] cursor-pointer">
@@ -159,14 +160,15 @@ export default function Features() {
         </div>
         {/* item8 */}
         <div className="flex items-center gap-[0.4rem]">
-          <div className="flex justify-center items-center w-[2.8rem] h-[3rem] bg-purple-500 rounded-[10px] cursor-pointer">
-            <BsCardImage className="text-white text-[1.2rem]" />
+          <div className="flex justify-center items-center w-[2.8rem] h-[3rem]">
+            <PiUserCircleDashed className=" bg-white text-[1.2rem] cursor-pointer" />
           </div>
           <div>
             <h5>Train </h5>
             <p className="text-[0.8rem] text-[#808080b4]">
-              Generate images with custom <br />
-              styles in flux and ideogram.
+              Teach Krea to replicate your style,
+              <br />
+              products, or characters.
             </p>
           </div>
           <button className="bg-[#80808031] p-[0.4rem] px-[1.5rem] text-[0.8rem] border-none rounded-[15px] cursor-pointer">

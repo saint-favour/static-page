@@ -32,7 +32,7 @@ import { FiMoon } from "react-icons/fi";
 // hooks
 import { useState } from "react";
 
-const iconMode = [<PiSunDimFill key="sun" />, <FiMoon key="moon"/>];
+
 
 const questrialFont = Questrial({
     subsets: ["latin"],
@@ -40,13 +40,11 @@ const questrialFont = Questrial({
 });
 
 export default function Home() {
-  const [mode, setMode] = useState(iconMode[0]);
+  const [mode, setMode] = useState(<PiSunDimFill />);
   const [bgColor, setbgColor] = useState("light-mode");
 
   const changeModeIcon = () => {
-    const currentIndex = iconMode.indexOf(mode);
-    const nextIndex = (currentIndex + 1) % iconMode.length;
-    setMode(iconMode[nextIndex]);
+    setMode(bgColor === "light-mode" ? <FiMoon /> : <PiSunDimFill />);
     setbgColor(bgColor === "light-mode" ? "dark-mode" : "light-mode");
   };
 
