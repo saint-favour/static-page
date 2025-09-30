@@ -32,7 +32,8 @@ import { FiMoon } from "react-icons/fi";
 // hooks
 import { useState } from "react";
 
-const iconMode = [<PiSunDimFill />, <FiMoon />];
+const iconMode = [<PiSunDimFill key="sun" />, <FiMoon key="moon"/>];
+
 const questrialFont = Questrial({
     subsets: ["latin"],
     weight: "400" 
