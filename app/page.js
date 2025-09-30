@@ -2,17 +2,14 @@
 import Features from "@/component/features";
 import Main from "@/component/main";
 
-
 // fonts
-import {Questrial} from "next/font/google"
-
+import { Questrial } from "next/font/google";
 
 // image
 import Image from "next/image";
 import brand from "../public/brand.jpeg";
 
 // hooks
-
 
 // icons
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
@@ -32,13 +29,6 @@ import { FiMoon } from "react-icons/fi";
 // hooks
 import { useState } from "react";
 
-
-
-const questrialFont = Questrial({
-    subsets: ["latin"],
-    weight: "400" 
-});
-
 export default function Home() {
   const [mode, setMode] = useState(<PiSunDimFill />);
   const [bgColor, setbgColor] = useState("light-mode");
@@ -49,7 +39,7 @@ export default function Home() {
   };
 
   return (
-    <body className={`${bgColor} ${questrialFont}`}>
+    <body className={bgColor}>
       <header className="pt-[1rem]">
         <nav className="flex justify-between items-center flex-1 mx-[2rem]">
           {/* logo relative link  */}
