@@ -3,7 +3,7 @@ import Features from "@/component/features";
 import Main from "@/component/main";
 
 // fonts
-import { Questrial } from "next/font/google";
+// import { Questrial } from "next/font/google";
 
 // image
 import Image from "next/image";
