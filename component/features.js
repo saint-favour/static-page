@@ -67,7 +67,6 @@ export default function Features() {
             <h5>Realtime </h5>
             <p className="text-[0.8rem] text-[#808080b4]">
               Realtime AI rendering on a canvas
-              <br />
               Instant feedback loops.
             </p>
           </div>
@@ -88,7 +87,7 @@ export default function Features() {
               </span>
             </h5>
             <p className="text-[0.8rem] text-[#808080b4]">
-              Upscale and enhance images and <br />
+              Upscale and enhance images and 
               videos up to 22K.
             </p>
           </div>
@@ -167,7 +166,6 @@ export default function Features() {
             <h5>Train </h5>
             <p className="text-[0.8rem] text-[#808080b4]">
               Teach Krea to replicate your style,
-              <br />
               products, or characters.
             </p>
           </div>
